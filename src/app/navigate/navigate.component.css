@@ -1,6 +1,6 @@
 .icon-bar {
   width: 100%; /* Full-width */
-  background-color: #555; /* Dark-grey background */
+  background-color: #000; /* Dark-grey background */
   overflow: auto; /* Overflow due to float */
 }
 
@@ -15,9 +15,9 @@
 }
 
 .icon-bar a:hover {
-  background-color: #000; /* Add a hover color */
+  background-color: #6B6763; /* Add a hover color */
 }
 
 .active {
-  background-color: #4CAF50; /* Add an active/current color */
+  background-color: #E21E2A; /* Add an active/current color */
 }
