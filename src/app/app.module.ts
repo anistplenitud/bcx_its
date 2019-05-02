@@ -24,6 +24,8 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { NgxGalleryModule } from 'ngx-gallery';
+
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
+    NgxGalleryModule,
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
     ModalModule.forRoot()

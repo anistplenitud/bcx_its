@@ -4,4 +4,43 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 html, body { height: 100%; }
+@font-face {
+    font-family: Geomanist;
+    src: url("./assets/fonts/Geomanist/Geomanist-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Geomanist;
+    font-weight: bold;
+    src: url("./assets/fonts/Geomanist/Geomanist-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Geomanist;
+    
+    src: url("./assets/fonts/Geomanist/Geomanist-Light.otf") format("opentype");
+    font-weight: lighter;
+}
+
+
+@font-face {
+    font-family: Geomanist;
+    font-weight: thin;
+    src: url("./assets/fonts/Geomanist/Geomanist-Thin.otf") format("opentype");
+}
+
+
+@font-face {
+    font-family: Geomanist;
+    font-weight: black;
+    src: url("./assets/fonts/Geomanist/Geomanist-Black.otf") format("opentype");
+}
+
+
+body {
+  font-family: Geomanist;
+}
+/*
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*/
