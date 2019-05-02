@@ -10,6 +10,8 @@ import { LocationComponent }	from './location/location.component';
 import { AgendaComponent }		from './agenda/agenda.component';
 import { GalleryComponent }		from './gallery/gallery.component';
 import { TeamsComponent }		from './teams/teams.component';
+import { RateEventComponent }	from './rate-event/rate-event.component';
+import { PollComponent }		from './poll/poll.component';
 
 
 const routes: Routes = [
@@ -23,7 +25,9 @@ const routes: Routes = [
 	{ path: 'location', component: LocationComponent },
 	{ path: 'agenda', component: AgendaComponent },
 	{ path: 'gallery', component: GalleryComponent },
-	{ path: 'teams', component: TeamsComponent }
+	{ path: 'teams', component: TeamsComponent },
+	{ path: 'poll', component: PollComponent },
+	{ path: 'rate-event', component:RateEventComponent }
 ];
 
 @NgModule({

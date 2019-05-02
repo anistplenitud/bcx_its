@@ -61,3 +61,8 @@ h4 {
     min-width: 60px;
   }
 }
+
+.dash_img {
+  width: 20vw;
+  height: 20vw;
+}
