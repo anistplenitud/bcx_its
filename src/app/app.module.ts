@@ -25,6 +25,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { ImageUploadComponentComponent } from './image-upload-component/image-upload-component.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { NgxGalleryModule } from 'ngx-gallery';
     TeamsComponent,
     GalleryComponent,
     PollComponent,
-    RateEventComponent
+    RateEventComponent,
+    ImageUploadComponentComponent
   ],
   imports: [
     BrowserModule,
