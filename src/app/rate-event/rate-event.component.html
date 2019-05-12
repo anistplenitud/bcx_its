@@ -1,3 +1,9 @@
 <p>
   rate-event works!
 </p>
+<label>Name :</label>
+<input [(ngModel)]="Hero.name" type="text" name="userName">
+{{Hero.name}}
+<app-starsrate></app-starsrate>
+<textarea [(ngModel)]="Hero.comment"></textarea>
+{{Hero.comment}}

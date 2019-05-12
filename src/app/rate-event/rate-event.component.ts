@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RateEventComponent implements OnInit {
 
+  Hero = {
+  	name : '',
+  	comment : '',
+  	rating : 0
+	}
+
   constructor() { }
 
   ngOnInit() {

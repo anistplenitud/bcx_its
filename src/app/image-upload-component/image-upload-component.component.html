@@ -7,10 +7,23 @@
          (change)="processFile(imageInput)">
 </label>
 
-<div *ngIf="selectedFile" class="image-preview-container">
-	<div class="img-preview" 
-	[ngStyle] = "{'background-image': 'url('+selectedFile.src+')'}">
-
-		
+<div *ngIf="selectedFile && selectedFile.clear !== 'clear'" class="image-preview-container">
+	<div *ngIf = "selectedFile.status === 'ok'" class="img-preview" 
+	[ngStyle] = "{'background-image': 'url('+selectedFile.src+')'}">		
 	</div>
+
+	<div *ngIf = "selectedFile.pending" class="img-loading-overlay">
+		<div class="img-spinning-circle"></div>
+	</div>
+
+	<div *ngIf="selectedFile.status === 'ok'" class="alert alert-success alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert" (click)="clearFile()">&times;</button>
+		Image Uploaded Successfully
+	</div>
+
+<div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger alert-dismissible">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	Image Upload Failed!
+</div>
+
 </div>

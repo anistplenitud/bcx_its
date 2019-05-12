@@ -25,7 +25,9 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgxGalleryModule } from 'ngx-gallery';
+import { HttpClientModule } from '@angular/common/http';
 import { ImageUploadComponentComponent } from './image-upload-component/image-upload-component.component';
+import { StarsrateComponent } from './starsrate/starsrate.component';
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { ImageUploadComponentComponent } from './image-upload-component/image-up
     GalleryComponent,
     PollComponent,
     RateEventComponent,
-    ImageUploadComponentComponent
+    ImageUploadComponentComponent,
+    StarsrateComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { ImageUploadComponentComponent } from './image-upload-component/image-up
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule,
     MatCheckboxModule,
     NgxGalleryModule,
     TooltipModule.forRoot(),

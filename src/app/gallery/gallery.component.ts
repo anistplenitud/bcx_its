@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
 
-
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -41,7 +40,7 @@ export class GalleryComponent implements OnInit {
             {
                 small: 'assets/images/6-big.jpeg',
                 medium: 'assets/images/6-big.jpeg',
-                big: 'assets/images/6-big.jpeg'
+                big: 'assets/il;k;lmages/6-big.jpeg'
             },
             {
                 small: 'assets/images/6-big.jpeg',

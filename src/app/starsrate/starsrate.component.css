@@ -1,0 +1,16 @@
+.icon-bar {
+  width: 100%; /* Full-width */
+  overflow: auto; /* Overflow due to float */
+  font-size: 36px;
+}
+
+.icon-bar {
+  width: 100%; /* Full-width */
+  overflow: auto; /* Overflow due to float */
+}
+
+span {
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; 
+  font-size: 36px; /* Increased font size */
+}
