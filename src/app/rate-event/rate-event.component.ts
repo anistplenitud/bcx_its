@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RateService } from '../rate.service';
 
 @Component({
   selector: 'app-rate-event',
@@ -13,7 +14,21 @@ export class RateEventComponent implements OnInit {
   	rating : 0
 	}
 
-  constructor() { }
+  getAllInfo() {
+  	console.log('fired');
+
+  	console.log(this.Hero);
+
+  	
+  }
+
+  constructor(private rateService: RateService) {
+  	this.rateService.myMethod$.subscribe((data) => {
+                this.Hero.rating = data; // And he have data here too!
+                console.log(this.Hero.rating)
+            }
+        );
+  }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RateService } from '../rate.service';
 
 @Component({
   selector: 'app-starsrate',
@@ -11,9 +12,10 @@ export class StarsrateComponent implements OnInit {
 
   public setRating(x){
   		this.Rating = x;
+  		this.rateService.myMethod(this.Rating);
   }
 
-  constructor() { }
+  constructor(private rateService: RateService) { }
 
   ngOnInit() {
   }
