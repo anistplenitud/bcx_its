@@ -8,16 +8,10 @@ input {
 
 .btn-bwm {
   background-color: grey;
-  border-color: red;
+  border-color: gray;
   color: white;
   padding: 15px 30px;
   font-size: 20px;
-  border: 1px solid red;
-
-  &:hover, &:focus, &:active {
-    border-color: grey !important;
-    background-color: green !important;
-  }
 }
 
 .img-preview-container {

@@ -1,11 +1,16 @@
-<p>
-  rate-event works!
+<h1>Rate Your Experience !</h1>
+<br>
+<p><small>
+  Kindly provide your name.
+  </small> 
 </p>
-<label>Name :</label>
-<input [(ngModel)]="Hero.name" type="text" name="userName">
-{{Hero.name}}
+<!-- label>Name :</label> <br -->
+<input [(ngModel)]="Hero.name" type="text" class="comment">
+<br>
+<label><small>How do you rate your experience here ? :</small></label> <br>
 <app-starsrate></app-starsrate>
-<textarea [(ngModel)]="Hero.comment"></textarea>
-{{Hero.comment}}
-<button (click)="getAllInfo()">Submit Review</button>
-{{Hero.rating}}
+<br>
+<label><small>Any comments, suggestions ?</small></label> <br>
+<textarea [(ngModel)]="Hero.comment" class="comment"></textarea>
+<br>
+<button (click)="getAllInfo()" class="btn-bwm">Submit Review</button>
