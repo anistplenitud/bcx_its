@@ -18,6 +18,16 @@ export class RateEventComponent implements OnInit {
   	console.log('fired');
 
   	console.log(this.Hero);
+  	this.rateService.uploadRating(this.Hero).subscribe(
+  		(x)=>{
+  			console.log(x);
+  			console.log('OK');
+  		},
+  		(x)=>{
+  			console.log(x);
+  			console.log('try again');
+  		}
+  	);
 
   	
   }

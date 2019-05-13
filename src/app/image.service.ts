@@ -13,7 +13,7 @@ export class ImageService {
   
   constructor(private http: HttpClient) { }
 
-  public uploadImage(image:File): Observable<any> {
+  public uploadImage(image): Observable<any> {
   	//debugger;
   	const formData = new FormData();
 

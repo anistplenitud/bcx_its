@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
+const httpOptions = {
+		headers: new HttpHeaders({ 'Content-Type':'application/json' })
+	};
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +16,7 @@ export class RateService {
 
     private myMethodSubject = new Subject<any>();
 
-    constructor() {
+    constructor(private http: HttpClient) {
         this.myMethod$ = this.myMethodSubject.asObservable();
     }
 
@@ -19,5 +25,13 @@ export class RateService {
         // we can do stuff with data if we want
         this.myMethodSubject.next(data);
     }
+
+    public uploadRating(data): Observable<any> {
+  	
+  	return this.http.post('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/rate',
+  	 data);
+  }
+
+
 
 }
