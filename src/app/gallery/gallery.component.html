@@ -4,6 +4,13 @@
 <br>
 <br>
 <hr>
+<div  *ngFor="let image of galleryImages">
+	
+		<img class="img-rounded" src= "{{ image.imageUrl }}" width="300" height="300" />
+</div>
+	
+	
+
 
 <small>
 	Here are some memories shared by our colleagues :

@@ -21,4 +21,8 @@ export class ImageService {
   	//formData.append('test', "I am here");
   	return this.http.post('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/image_upload', formData);
   }
+
+  public getAllImages() : Observable<any> {
+  	return this.http.get('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/gallery');
+  }
 }
