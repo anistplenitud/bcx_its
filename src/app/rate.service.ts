@@ -26,6 +26,12 @@ export class RateService {
         this.myMethodSubject.next(data);
     }
 
+    myName(name, value) {
+      console.log(name);
+      console.log(value);
+
+    }
+
     public uploadRating(data): Observable<any> {
   	
   	return this.http.post('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/rate',
