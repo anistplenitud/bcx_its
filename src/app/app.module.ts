@@ -30,6 +30,7 @@ import { ImageUploadComponentComponent } from './image-upload-component/image-up
 import { StarsrateComponent } from './starsrate/starsrate.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import { StarsrateComponent } from './starsrate/starsrate.component';
     PollComponent,
     RateEventComponent,
     ImageUploadComponentComponent,
-    StarsrateComponent
+    StarsrateComponent,
   ],
   imports: [
     BrowserModule,
