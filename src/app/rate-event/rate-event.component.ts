@@ -10,13 +10,15 @@ export class RateEventComponent implements OnInit {
 
   justClicked : number = 0;
 
+  status : Number = -1;
+
   Hero = {
-  	name : 'ITS Incubation', //how do we set this ???
+    team : -1,
   	comment : '',
   	rating : [0,0,0,0]
 	}
-  myName(name) {
-    this.Hero.rating[name] = this.justClicked;
+  myName(i) {
+    this.Hero.rating[i] = this.justClicked;
     console.log(this.Hero);
   }
 
@@ -28,10 +30,12 @@ export class RateEventComponent implements OnInit {
   		(x)=>{
   			console.log(x);
   			console.log('OK');
+        this.status = 1;
   		},
   		(x)=>{
   			console.log(x);
   			console.log('try again');
+        this.status = 0;
   		}
   	);
 
@@ -43,6 +47,13 @@ export class RateEventComponent implements OnInit {
                 this.justClicked = data; // And he have data here too!
             }
         );
+    this.rateService.getbutoscore().subscribe((data) => {
+      this.Hero.team = data.team;
+      console.log(data);
+    }, 
+    (err) => {
+      console.log(err);
+    });
   }
 
   ngOnInit() {

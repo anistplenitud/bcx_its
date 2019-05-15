@@ -1,5 +1,9 @@
 <h1>Strategy X-Ray</h1>
-<h4>Currently reviewing : {{Hero.name}}</h4>
+
+<div *ngIf = "Hero.team !== -1">
+	
+
+<h4>Currently reviewing : Team {{Hero.team}}</h4>
 <br>
 <!-- p><small>
   Kindly provide your name.
@@ -26,8 +30,18 @@ Attracting and building talent for the future
 <textarea [(ngModel)]="Hero.comment" class="comment"></textarea>
 <br -->
 <button (click)="getAllInfo()" class="btn-bwm">Submit Review</button>
-	<div class="alert alert-success alert-dismissible">
+</div>
+
+<div *ngIf="Hero.team === -1">
+	<h3> No team is being scored at the moment</h3>
+</div>
+
+<div *ngIf= "status === 1" class="alert alert-success alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		Image Uploaded Successfully
+		Your Scoring has been added Successfully! Thank you.
+	</div>
+<div *ngIf= "status === 0" class="alert alert-danger alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		Something went wrong, maybe internet ? Please try again,
 	</div>
 <br><br><br><br><br><br><br><br>

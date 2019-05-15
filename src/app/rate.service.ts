@@ -36,8 +36,10 @@ export class RateService {
   	
   	return this.http.post('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/rate',
   	 data);
-  }
+    }
 
-
+     public getbutoscore(): Observable<any> {
+      return this.http.get('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/toscore');
+      }
 
 }
