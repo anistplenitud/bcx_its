@@ -28,11 +28,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImageUploadComponentComponent } from './image-upload-component/image-upload-component.component';
 import { StarsrateComponent } from './starsrate/starsrate.component';
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 61d18b97ca54716b3b2e1ba45a5d3efacfef1436
 @NgModule({
   declarations: [
     AppComponent,
