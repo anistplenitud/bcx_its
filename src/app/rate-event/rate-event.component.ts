@@ -8,11 +8,17 @@ import { RateService } from '../rate.service';
 })
 export class RateEventComponent implements OnInit {
 
+  justClicked : number = 0;
+
   Hero = {
-  	name : '',
+  	name : 'ITS Incubation', //how do we set this ???
   	comment : '',
-  	rating : 0
+  	rating : [0,0,0,0]
 	}
+  myName(name) {
+    this.Hero.rating[name] = this.justClicked;
+    console.log(this.Hero);
+  }
 
   getAllInfo() {
   	console.log('fired');
@@ -34,8 +40,7 @@ export class RateEventComponent implements OnInit {
 
   constructor(private rateService: RateService) {
   	this.rateService.myMethod$.subscribe((data) => {
-                this.Hero.rating = data; // And he have data here too!
-                console.log(this.Hero.rating)
+                this.justClicked = data; // And he have data here too!
             }
         );
   }

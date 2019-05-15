@@ -24,13 +24,15 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { NgxGalleryModule } from 'ngx-gallery';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageUploadComponentComponent } from './image-upload-component/image-upload-component.component';
 import { StarsrateComponent } from './starsrate/starsrate.component';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 61d18b97ca54716b3b2e1ba45a5d3efacfef1436
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +62,6 @@ import { StarsrateComponent } from './starsrate/starsrate.component';
     MatButtonModule,
     HttpClientModule,
     MatCheckboxModule,
-    NgxGalleryModule,
     TooltipModule.forRoot(),
     BsDropdownModule.forRoot(),
     ModalModule.forRoot()
