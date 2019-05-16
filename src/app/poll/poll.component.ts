@@ -7,10 +7,13 @@ import { RateService } from '../rate.service';
   styleUrls: ['./poll.component.css']
 })
 export class PollComponent implements OnInit {
+
   currentPoll = {
     question : '',
     responses : [] 
   }
+
+  voted = 0;
 
   constructor(private rateService: RateService) {
 
@@ -26,7 +29,10 @@ export class PollComponent implements OnInit {
 
   }
 
-
+  public respondToPoll(option) {
+    this.voted = 1;
+     console.log(option);
+  }
 
   ngOnInit() {
   }
