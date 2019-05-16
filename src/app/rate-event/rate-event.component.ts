@@ -47,6 +47,7 @@ export class RateEventComponent implements OnInit {
                 this.justClicked = data; // And he have data here too!
             }
         );
+
     this.rateService.getbutoscore().subscribe((data) => {
       this.Hero.team = data.team;
       console.log(data);
@@ -54,6 +55,17 @@ export class RateEventComponent implements OnInit {
     (err) => {
       console.log(err);
     });
+
+    setInterval(()=>{
+
+      this.rateService.getbutoscore().subscribe((data) => {
+      this.Hero.team = data.team;
+    }, 
+    (err) => {
+      console.log(err);
+    });
+
+    }, 2000);
   }
 
   ngOnInit() {

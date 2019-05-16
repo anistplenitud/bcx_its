@@ -5,23 +5,31 @@
     <img id="gif" src="https://i2.wp.com/i.gifer.com/embedded/download/Z3zF.gif" height="50" width="60">
   </header>
 <hr>
-<div class="container">
-  <div *ngIf = "voted === 0" class="row">
+<div *ngIf ="currentPoll.question && currentPoll.question !== 'loading'" class="container">
+  <div class="row">
       <p class="quiz">
         {{currentPoll.question}}
       </p>
   <br>
-    <div *ngFor = "let ans of currentPoll.responses">
-    <button (click)="respondToPoll(ans)"> {{ans}} </button><br>
+  </div>
+    <div *ngFor = "let ans of currentPoll.data" class="row">
+    <button *ngIf ="ans.text" (click)="respondToPoll(ans.text)" class="pollbtn"> {{ans.text}} </button><br>
+    <span *ngIf = "ans.text" class="pollbtn">{{ans.vote}}</span>
   </div> 
-    </div>
+    
 
   <div *ngIf = "voted === 1" class="row">
     <div class="alert alert-success alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <button type="button" class="close" data-dismiss="alert" (click)="unsetVote()">&times;</button>
     Your Response has been added Successfully! Thank you.
     </div>
   </div>  
+</div>
+<div *ngIf ="currentPoll.question === 'loading'" class="container">
+  <h2> loading ... </h2>
+</div>
+<div *ngIf ="!currentPoll.question" class="container">
+  <h2> No poll running at this time </h2>
 </div>
 <br>
 <br>

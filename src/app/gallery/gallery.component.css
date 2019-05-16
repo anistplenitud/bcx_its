@@ -11,4 +11,13 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
+img {
+  border-radius: 8px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+}

@@ -9,8 +9,9 @@ import { RateService } from '../rate.service';
 export class PollComponent implements OnInit {
 
   currentPoll = {
-    question : '',
-    responses : [] 
+    id : String,
+    question : 'loading',
+    data : [{}] 
   }
 
   voted = 0;
@@ -19,19 +20,45 @@ export class PollComponent implements OnInit {
 
       this.rateService.getpoll().subscribe(
         (x)=>{
+            this.currentPoll.id = x.timestamp;
             this.currentPoll.question = x.statement;
-            this.currentPoll.responses = x.options;
-
+            this.currentPoll.data = x.data;
+            
+            console.log(x);
         },
         (e)=>{
 
         });
+
+      setInterval(()=>{
+      this.rateService.getpoll().subscribe(
+        (x)=>{
+            this.currentPoll.id = x.timestamp;
+            this.currentPoll.question = x.statement;
+            this.currentPoll.data = x.data;
+             },
+        (e)=>{
+
+        });
+
+    }, 1000);
 
   }
 
   public respondToPoll(option) {
     this.voted = 1;
      console.log(option);
+     this.rateService.voteonpoll({'timestamp ' : this.currentPoll.id,
+      'text' : option}).subscribe((x) => {
+        console.log(x);
+      },
+      (e)=> {
+        console.log(e);
+      })
+  }
+
+  unsetVote() {
+    this.voted = 0;
   }
 
   ngOnInit() {
