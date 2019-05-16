@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RateService } from '../rate.service';
 
 @Component({
   selector: 'app-poll',
@@ -6,17 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./poll.component.css']
 })
 export class PollComponent implements OnInit {
-
-  constructor() { }
-
   currentPoll = {
-    question : 'Do you agree that Cloud is the future ?',
-    n_responses : 2,
-    responses : ['a\n','yes\n', 'no'] 
+    question : '',
+    responses : [] 
   }
+
+  constructor(private rateService: RateService) {
+
+      this.rateService.getpoll().subscribe(
+        (x)=>{
+            this.currentPoll.question = x.statement;
+            this.currentPoll.responses = x.options;
+
+        },
+        (e)=>{
+
+        });
+
+  }
+
+
 
   ngOnInit() {
   }
+
+
 
 
 }

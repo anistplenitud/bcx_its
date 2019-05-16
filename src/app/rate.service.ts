@@ -38,8 +38,12 @@ export class RateService {
   	 data);
     }
 
-     public getbutoscore(): Observable<any> {
+    public getbutoscore(): Observable<any> {
       return this.http.get('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/toscore');
-      }
+    }
+
+    public getpoll(): Observable<any> {
+      return this.http.get('http://node-express-env.uehy6s5937.us-east-2.elasticbeanstalk.com/topoll');
+    }
 
 }
