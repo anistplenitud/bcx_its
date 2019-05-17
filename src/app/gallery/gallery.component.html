@@ -1,19 +1,22 @@
 <div class="bg">
-<h1>Share a memory! </h1>
-
-<app-image-upload-component></app-image-upload-component>
-<br>
-<br>
-<hr>
-<div *ngFor="let image of galleryImages" class="gallery">
+	<h3>Gallery</h3>
+	<br>
+	<h4>Share a memory! </h4>
 	
-<div class="img-rounded"><img src= "{{ image.imageUrl }}" width="300" height="300" /></div>
-</div>
-</div>
+	<app-image-upload-component></app-image-upload-component>
 	
+	<br>
+	<br>
+	
+	<hr>
+	<div *ngFor="let image of galleryImages" class="gallery">
+		<div class="img-rounded"><img src= "{{ image.imageUrl }}" width="300" height="300" />
+		</div>
+	</div>
 
 
-<small>
-	Here are some memories shared by our colleagues :
-</small>
-<br>
+	<small>
+		Here are some memories shared by our colleagues :
+	</small>
+	<br>
+</div>

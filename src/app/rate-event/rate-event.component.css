@@ -8,7 +8,7 @@
 }
 
 .bg {
-  /* The image used 
+  /* The image used */
   background-image: url("../../assets/images/background/1.png");
 
   /* Full height */
@@ -23,4 +23,12 @@
 
 .comment {
   width: 100%;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
 }

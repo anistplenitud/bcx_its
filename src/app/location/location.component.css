@@ -1,39 +1,46 @@
-.btn-bwm {
+/*.btn-bwb {
   background-color: grey;
   border-color: red;
   color: white;
   padding: 15px 30px;
   font-size: 20px;
   border: 1px solid;
-}
+}*/
 
+h3 {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	color: white;
+  }
 
 .btn-bwb {
-	box-shadow:inset 0px 1px 0px 0px grey;
-	background-color:grey;
+	/*box-shadow:inset 0px 1px 0px 0px grey;
 	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
+	-webkit-border-radius:6px;*/
+	background-color:grey;
 	border-radius:6px;
 	border:1px solid grey;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
+	font-family:Arial;
 	font-size:20px;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px grey;
+	margin-left: auto;
+  	margin-right: auto;
+	
 }
 .myButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	/*-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
-	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;*/
 	background-color:#fe1a00;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #d83526;
-	display:inline-block;
+	border-radius:10px;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
@@ -42,13 +49,21 @@
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #E21E2A;
+	margin-left: auto;
+  	margin-right: auto;
 }
-.myButton:hover {
-	background-color:#E21E2A;
-}
+.myButton:hover {background-color:#ff8080}
+
 .myButton:active {
 	position:relative;
 	top:1px;
 }
 
+.btn-bwb:active
+{
+	position:relative;
+	top:1px;
+}
+
+.btn-bwb:hover {background-color:#e0e0d1}
 

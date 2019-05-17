@@ -1,48 +1,48 @@
 <div class="bg">
-<h1>Strategy X-Ray</h1>
+	<h3>Strategy X-Ray</h3>
+	<br>
+	<div *ngIf = "Hero.team !== -1">
+		
+		<h4>Currently reviewing : Team {{Hero.team}}</h4>
+		<br>
+		<!-- p><small>
+			Kindly provide your name.
+		  </small>
+		</p -->
+		<!-- label>Name :</label> <br -->
+		<!-- input [(ngModel)]="Hero.name" type="text" class="comment">
+		<br -->
+		<!-- label><small>How do you rate your experience here ? :</small></label --> <br>
+		#1 choice for customers in our chosen ecosystem
+		<app-starsrate name="first" (click)="myName(0)"></app-starsrate>
+		<hr>
+		Leverage and invest in ecosystem for scale, access and innovation
+		<app-starsrate name="second" (click)="myName(1)"></app-starsrate>
+		<hr>
+		Leading provider of end-to-end digital solutions by 2025
+		<app-starsrate name="third" (click)="myName(2)"></app-starsrate>
+		<hr>
+		Attracting and building talent for the future
+		<app-starsrate name="fourth" (click)="myName(3)"></app-starsrate>
+		
+		<br>
+		<!-- label><small>Any comments, suggestions ?</small></label> <br>
+		<textarea [(ngModel)]="Hero.comment" class="comment"></textarea>
+		<br -->
+		<button (click)="getAllInfo()" class="btn-bwm">Submit Review</button>
+	</div>
 
-<div *ngIf = "Hero.team !== -1">
-	
+	<div *ngIf="Hero.team === -1">
+		<h4>No team is being scored at the moment.</h4>
+	</div>
 
-<h4>Currently reviewing : Team {{Hero.team}}</h4>
-<br>
-<!-- p><small>
-  Kindly provide your name.
-  </small> 
-</p -->
-<!-- label>Name :</label> <br -->
-<!-- input [(ngModel)]="Hero.name" type="text" class="comment">
-<br -->
-<!-- label><small>How do you rate your experience here ? :</small></label --> <br>
-#1 choice for customers in our chosen ecosystem
-<app-starsrate name="first" (click)="myName(0)"></app-starsrate>
-<hr>
-Leverage and invest in ecosystem for scale, access and innovation
-<app-starsrate name="second" (click)="myName(1)"></app-starsrate>
-<hr>
-Leading provider of end-to-end digital solutions by 2025
-<app-starsrate name="third" (click)="myName(2)"></app-starsrate>
-<hr>
-Attracting and building talent for the future
-<app-starsrate name="fourth" (click)="myName(3)"></app-starsrate>
-
-<br>
-<!-- label><small>Any comments, suggestions ?</small></label> <br>
-<textarea [(ngModel)]="Hero.comment" class="comment"></textarea>
-<br -->
-<button (click)="getAllInfo()" class="btn-bwm">Submit Review</button>
-</div>
-
-<div *ngIf="Hero.team === -1">
-	<h3> No team is being scored at the moment</h3>
-</div>
-
-<div *ngIf= "status === 1" class="alert alert-success alert-dismissible">
+	<div *ngIf= "status === 1" class="alert alert-success alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		Your Scoring has been added Successfully! Thank you.
 	</div>
-<div *ngIf= "status === 0" class="alert alert-danger alert-dismissible">
+	<div *ngIf= "status === 0" class="alert alert-danger alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		Something went wrong, maybe internet ? Please try again,
 	</div>
-<br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
