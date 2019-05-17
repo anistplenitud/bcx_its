@@ -1,5 +1,6 @@
 <div class="bg">
-<h1>Strategy X-Ray</h1>
+
+<h3>Strategy X-Ray</h3>
 
 <div *ngIf = "Hero.team !== -1">
 	
@@ -33,16 +34,18 @@ Rate the overall content and delivery of the presentation
 <button (click)="getAllInfo()" class="btn-bwm">Submit Review</button>
 </div>
 
-<div *ngIf="Hero.team === -1">
-	<h3> No team is being scored at the moment</h3>
-</div>
 
-<div *ngIf= "status === 1" class="alert alert-success alert-dismissible">
+	<div *ngIf="Hero.team === -1">
+		<h4>No team is being scored at the moment.</h4>
+	</div>
+
+	<div *ngIf= "status === 1" class="alert alert-success alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		Your feedback was successfully recorded! Thank you.
 	</div>
-<div *ngIf= "status === 0" class="alert alert-danger alert-dismissible">
+	<div *ngIf= "status === 0" class="alert alert-danger alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		Something went wrong, maybe internet ? Please try again,
 	</div>
-<br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>

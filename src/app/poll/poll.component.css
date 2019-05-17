@@ -1,5 +1,5 @@
 .bg {
-    /* The image used
+    /* The image used */
     background-image: url("../../assets/images/background/1.png");
   
     /* Full height */
@@ -12,14 +12,23 @@
     background-size: cover;
   }
 
+  h3 {
+      margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        color:white;
+  }
+
 .pollbtn {
     width: 100%;
 }
 
-.gif{
+/*.gif{
     align-content: center;
     margin-top: 10px;
-}
+}*/
+
 .quiz{
     width: 100%;
     padding: 5px 0px 0px 5px;
