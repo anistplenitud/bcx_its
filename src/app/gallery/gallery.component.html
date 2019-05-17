@@ -9,14 +9,18 @@
 	<br>
 	
 	<hr>
+	<small>
+			Here are some memories shared by our colleagues :
+	</small>
+	<br><br>
 	<div *ngFor="let image of galleryImages" class="gallery">
-		<div class="img-rounded"><img src= "{{ image.imageUrl }}" width="300" height="300" />
-		</div>
+		<!--<a target="_blank" href="{{ image.imageUrl }}">-->
+			<div class="img-rounded"><img src= "{{ image.imageUrl }}"/>
+			</div>
+		<!--</a>-->
 	</div>
 
 
-	<small>
-		Here are some memories shared by our colleagues :
-	</small>
+	
 	<br>
 </div>
