@@ -14,11 +14,12 @@ export class RateEventComponent implements OnInit {
 
   Hero = {
     team : -1,
-  	comment : '',
+  	rate : 0,
   	rating : [0,'','','']
 	}
   myName(i) {
     this.Hero.rating[i] = this.justClicked;
+    this.Hero.rate = this.justClicked;
     console.log(this.Hero);
   }
 
