@@ -15,7 +15,7 @@ export class RateEventComponent implements OnInit {
   Hero = {
     team : -1,
   	comment : '',
-  	rating : [0,0,0,0]
+  	rating : [0,'','','']
 	}
   myName(i) {
     this.Hero.rating[i] = this.justClicked;

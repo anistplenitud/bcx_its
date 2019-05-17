@@ -13,18 +13,18 @@
 <!-- label>Name :</label> <br -->
 <!-- input [(ngModel)]="Hero.name" type="text" class="comment">
 <br -->
-<!-- label><small>How do you rate your experience here ? :</small></label --> <br>
-#1 choice for customers in our chosen ecosystem
+<!-- label><small>How do you rate your experience here ? :</small></label --> 
+What did you like most about the teams pitch ? <br>
+<input [(ngModel)] = "Hero.rating[1]" type="text" name="first_res" class="form-control">
+<hr>
+What was missing for you in that strategy ? <br>
+<input [(ngModel)] = "Hero.rating[2]" type="text" name="second_res" class="form-control">
+<hr>
+Provide one point you could add to the strategy ? <br>
+<input [(ngModel)] = "Hero.rating[3]" type="text" name="third_res" class="form-control">
+<hr>
+Rate the overall content and delivery of the presentation
 <app-starsrate name="first" (click)="myName(0)"></app-starsrate>
-<hr>
-Leverage and invest in ecosystem for scale, access and innovation
-<app-starsrate name="second" (click)="myName(1)"></app-starsrate>
-<hr>
-Leading provider of end-to-end digital solutions by 2025
-<app-starsrate name="third" (click)="myName(2)"></app-starsrate>
-<hr>
-Attracting and building talent for the future
-<app-starsrate name="fourth" (click)="myName(3)"></app-starsrate>
 
 <br>
 <!-- label><small>Any comments, suggestions ?</small></label> <br>
@@ -39,7 +39,7 @@ Attracting and building talent for the future
 
 <div *ngIf= "status === 1" class="alert alert-success alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		Your Scoring has been added Successfully! Thank you.
+		Your feedback was successfully recorded! Thank you.
 	</div>
 <div *ngIf= "status === 0" class="alert alert-danger alert-dismissible">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
