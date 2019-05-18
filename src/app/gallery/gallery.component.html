@@ -1,4 +1,7 @@
 <div class="bg">
+	<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
 	<h3>Gallery</h3>
 	<br>
 	<h4>Share a memory! </h4>
@@ -9,14 +12,16 @@
 	<br>
 	
 	<hr>
-	<div *ngFor="let image of galleryImages" class="gallery">
-		<div class="img-rounded"><img src= "{{ image.imageUrl }}" width="300" height="300" />
-		</div>
-	</div>
-
-
 	<small>
-		Here are some memories shared by our colleagues :
+			Here are some memories shared by our colleagues :
 	</small>
-	<br>
+	<br><br>
+	<div *ngFor="let image of galleryImages" class="gallery">
+		<a target="_blank" href="{{ image.imageUrl }}">
+			<!--<div class="img-rounded">-->
+				<img src= "{{ image.imageUrl }}" style="width:180px;height:180px;"/>
+			<!--</div>-->
+		</a>
+		<br><br><br><br><br><br><br><br>
+	</div>
 </div>
