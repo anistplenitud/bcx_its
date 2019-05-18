@@ -12,24 +12,24 @@
     background-size: cover;
   }
 
-  div.img-rounded, div.gallery {
+  div.gallery {
     margin: 5px;
    /* border: 1px solid #ccc;*/
     float: left;
     width: 180px;
   }
   
-  div.img-rounded, div.gallery:hover {
+  /*div.gallery:hover {
     border: 1px solid #777;
-  }
+  }*/
   
-  div.img-rounded img {
+  div.gallery img {
     width: 100%;
     height: auto;
   }
 
 img {
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .gallery {
