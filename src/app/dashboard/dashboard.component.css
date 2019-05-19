@@ -21,7 +21,7 @@ body {
 
 .bg {
   /* The image used */
-  background-image: url("../../assets/images/background/1.png");
+  background-image: url("https://s3.us-east-2.amazonaws.com/itssesseion/better.png");
 
   /* Full height */
   height: 100%;

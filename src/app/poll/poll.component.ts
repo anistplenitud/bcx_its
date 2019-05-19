@@ -41,7 +41,7 @@ export class PollComponent implements OnInit {
 
         });
 
-    }, 100000);
+    }, 2000);
 
   }
 
