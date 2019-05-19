@@ -1,10 +1,12 @@
 .bg {
     /* The image used */
     background-image: url("../../assets/images/background/1.png");
-  
+
     /* Full height */
     height: 100%;
     width: 100%;
+
+
   
     /* Center and scale the image nicely */
     background-position: center;
@@ -48,6 +50,7 @@
     /*margin-left: 10px;
     margin-right: 10px;
     margin-top: 2px;*/
+    margin-bottom: 100px;
     opacity: 50%;
 }
 #cmntbox{

@@ -4,8 +4,8 @@
   <a routerLink="/heroes">Heroes</a>
 </nav -->
 
-<div class="container">
-	 <router-outlet></router-outlet>
+<div class="container" style="height: 100%;">
+	 <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>
   
   <!-- app-messages></app-messages -->
