@@ -2,6 +2,13 @@
 body {
   
 }
+img
+{
+  float: right;
+  height: 30%;
+  width: 30%;
+  padding-right: 20px;
+}
 
 .btn {
   background-color: black;
