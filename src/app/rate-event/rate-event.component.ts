@@ -66,7 +66,7 @@ export class RateEventComponent implements OnInit {
       console.log(err);
     });
 
-    }, 2000);
+    }, 200000);
   }
 
   ngOnInit() {

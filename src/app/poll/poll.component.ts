@@ -41,14 +41,14 @@ export class PollComponent implements OnInit {
 
         });
 
-    }, 1000);
+    }, 100000);
 
   }
 
   public respondToPoll(option) {
     this.voted = 1;
      console.log(option);
-     this.rateService.voteonpoll({'timestamp ' : this.currentPoll.id,
+     this.rateService.voteonpoll({'timestamp' : this.currentPoll.id,
       'text' : option}).subscribe((x) => {
         console.log(x);
       },
