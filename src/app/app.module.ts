@@ -27,6 +27,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageUploadComponentComponent } from './image-upload-component/image-upload-component.component';
 import { StarsrateComponent } from './starsrate/starsrate.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { StarsrateComponent } from './starsrate/starsrate.component';
     RateEventComponent,
     ImageUploadComponentComponent,
     StarsrateComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,

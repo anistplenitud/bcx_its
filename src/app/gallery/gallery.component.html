@@ -19,7 +19,9 @@
 	<div *ngFor="let image of galleryImages" class="gallery">
 		
 			<!--<div class="img-rounded">-->
-				<img src= "{{ image.imageUrl }}" style="width:180px;height:180px;"/>
+					<a routerLink="/popup"><img src= "{{ image.imageUrl }}" style="width:180px;height:180px;"/>
+					</a>
+				
 			<!--</div>-->
 		
 		<br><br><br><br><br><br><br><br>
