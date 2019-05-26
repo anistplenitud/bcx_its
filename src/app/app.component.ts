@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'ITS Leadership Breakaway';
+  title = 'ITS Strategic Breakaway';
 
   onActivate(event) {
         let scrollToTop = window.setInterval(() => {

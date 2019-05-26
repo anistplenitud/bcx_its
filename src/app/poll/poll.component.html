@@ -3,7 +3,16 @@
     <h3>Poll</h3>
   
   <hr>
-  <div *ngIf ="currentPoll.question && currentPoll.question !== 'loading'" class="container">
+  <div *ngIf = "voted === 1" class="container">
+    <div class="row">
+      <div class="alert alert-success alert-dismissible" style="width: 100%;">
+        <button type="button" class="close" data-dismiss="alert" (click)="unsetVote()">&times;</button>
+        Your Response has been added Successfully! Thank you.
+      </div>
+    </div>
+      
+    </div>
+  <div *ngIf ="currentPoll.question && currentPoll.question !== 'loading' && voted !== 1" class="container">
     <div class="row">
       <p class="quiz">
         {{currentPoll.question}}
@@ -16,12 +25,7 @@
     </div> 
     
 
-    <div *ngIf = "voted === 1" class="row">
-      <div class="alert alert-success alert-dismissible">
-        <button type="button" class="close" data-dismiss="alert" (click)="unsetVote()">&times;</button>
-        Your Response has been added Successfully! Thank you.
-      </div>
-    </div>  
+      
   </div>
   <div *ngIf ="currentPoll.question === 'loading'" class="container">
     <h2> loading ... </h2>

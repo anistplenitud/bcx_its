@@ -12,7 +12,7 @@ import { GalleryComponent }		from './gallery/gallery.component';
 import { TeamsComponent }		from './teams/teams.component';
 import { RateEventComponent }	from './rate-event/rate-event.component';
 import { PollComponent }		from './poll/poll.component';
-
+import { FeedbackComponent }	from './feedback/feedback.component';
 
 const routes: Routes = [
 	{ path: 'heroes', component: HeroesComponent },
@@ -27,7 +27,8 @@ const routes: Routes = [
 	{ path: 'gallery', component: GalleryComponent },
 	{ path: 'teams', component: TeamsComponent },
 	{ path: 'poll', component: PollComponent },
-	{ path: 'rate-event', component:RateEventComponent }
+	{ path: 'rate-event', component:RateEventComponent },
+	{ path: 'feedback', component: FeedbackComponent }
 ];
 
 @NgModule({

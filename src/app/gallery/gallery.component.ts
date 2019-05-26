@@ -9,6 +9,7 @@ import { ImageService } from '../image.service';
 export class GalleryComponent implements OnInit {
 
     public galleryImages : [];
+    public currentimageUrl;
 
     constructor(private imageService : ImageService) {
         this.imageService.getAllImages().subscribe(
@@ -23,5 +24,9 @@ export class GalleryComponent implements OnInit {
  
     ngOnInit(): void {
  
+    }
+
+    public showImage(nowImage) {
+      this.currentimageUrl = nowImage;
     }
 }

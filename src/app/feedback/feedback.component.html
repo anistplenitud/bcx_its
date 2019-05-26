@@ -1,0 +1,62 @@
+
+<br>
+<div *ngIf = "asking === 0">
+	<div class="alert alert-success">
+		<strong>Thank You for participating</strong>
+	</div>
+</div>
+<div *ngIf = "asking === 1">
+	<label> Please enter your name </label>
+	<input [(ngModel)] = "name" type="text" name="q1" value="" class="form-control">
+	<input (click) = "nextquestion()" type="button" name="next" value="Proceed" class="btn btn-secondary form-control">
+	<br>
+</div>
+<div *ngIf = "asking === 2">
+	<label> What is your current impact on society ? </label>  
+	<textarea [(ngModel)] = "currentI" type="text" name="q2" value="" class="form-control"></textarea>
+	<input (click) = "nextquestion()" type="button" name="next2" value="Proceed" class="btn btn-secondary form-control">
+	<br>
+</div>
+<div *ngIf = "asking === 3">
+	<label> What will your future impact be on society ? </label> 
+	<textarea [(ngModel)] = "futureI" type="text" name="q3" value="" class="form-control"></textarea>
+	<input (click) = "uploadFeedback()" type="button" name="submit" value="Submit Feedback" class="btn btn-success form-control">
+</div>
+<hr>
+<small> Here is some of the feedback we've received:</small>
+<br>
+<br>
+
+<div *ngFor = "let feedback of previousFeedback">
+	<div class="row justify-content-center align-items-center" style="color: white; background-color: black;">
+		<strong>{{feedback.name}}</strong>
+	</div>
+	<div  class="row">
+		<div class="col">
+			<span><small><strong>Current Impact</strong></small></span><br>
+				<i>
+					{{feedback.cI}}
+				</i>
+			</div>
+	</div>
+	<div>
+		<div class="row">
+			<div class="col">
+			<span><small><strong>Future Impact</strong></small></span>
+			<br>
+			<i>
+				{{feedback.fI}}
+			</i>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

@@ -16,14 +16,39 @@
 			Here are some memories shared by our colleagues :
 	</small>
 	<br><br>
-	<div *ngFor="let image of galleryImages" class="gallery">
+
+  	<div class="gallery">
 		
-			<!--<div class="img-rounded">-->
-				<img src= "{{ image.imageUrl }}" style="width:180px;height:180px;"/>
-			<!--</div>-->
-		
-		<br><br><br><br><br><br><br><br>
+		<span *ngFor="let image of galleryImages">
+			<img (click) = "showImage(image.imageUrl)" src= "{{ image.imageUrl }}" style="width:180px;height:180px;padding: 20px;" data-toggle="modal" data-target="#myModal"/>
+
+		</span>	
+				
 	</div>
 	<br><br><br>
 </div>
-<br><br><br>
+
+
+<!-- The Modal -->
+  <div class="modal fade" id="myModal" >
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <img src= "{{ currentimageUrl }}" width="100%" />
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
