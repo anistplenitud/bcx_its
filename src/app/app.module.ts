@@ -27,7 +27,11 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageUploadComponentComponent } from './image-upload-component/image-upload-component.component';
 import { StarsrateComponent } from './starsrate/starsrate.component';
+<<<<<<< HEAD
 import { FeedbackComponent } from './feedback/feedback.component';
+=======
+import { PopupComponent } from './popup/popup.component';
+>>>>>>> 430364a8c2a67fdb43b3b4d285ec34f3e655a8c8
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { FeedbackComponent } from './feedback/feedback.component';
     RateEventComponent,
     ImageUploadComponentComponent,
     StarsrateComponent,
+<<<<<<< HEAD
     FeedbackComponent,
+=======
+    PopupComponent,
+>>>>>>> 430364a8c2a67fdb43b3b4d285ec34f3e655a8c8
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,12 @@ import { GalleryComponent }		from './gallery/gallery.component';
 import { TeamsComponent }		from './teams/teams.component';
 import { RateEventComponent }	from './rate-event/rate-event.component';
 import { PollComponent }		from './poll/poll.component';
+<<<<<<< HEAD
 import { FeedbackComponent }	from './feedback/feedback.component';
+=======
+import { PopupComponent } 		from './popup/popup.component';
+
+>>>>>>> 430364a8c2a67fdb43b3b4d285ec34f3e655a8c8
 
 const routes: Routes = [
 	{ path: 'heroes', component: HeroesComponent },
@@ -28,7 +33,11 @@ const routes: Routes = [
 	{ path: 'teams', component: TeamsComponent },
 	{ path: 'poll', component: PollComponent },
 	{ path: 'rate-event', component:RateEventComponent },
+<<<<<<< HEAD
 	{ path: 'feedback', component: FeedbackComponent }
+=======
+	{ path: 'popup', component:PopupComponent } 
+>>>>>>> 430364a8c2a67fdb43b3b4d285ec34f3e655a8c8
 ];
 
 @NgModule({
